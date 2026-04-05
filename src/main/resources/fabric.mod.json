@@ -3,20 +3,23 @@
 	"id": "aotb",
 	"version": "${version}",
 	"name": "All Of The Above",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Adds Some QoL things to Minecraft.",
 	"authors": [
-		"Me!"
+		"HourSlow"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "",
+		"sources": ""
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/aotb/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"net.hour.aotb.AllOfTheAbove"
+		],
+		"client": [
+			"net.hour.aotb.AllOfTheAboveClient"
 		],
 		"fabric-datagen": [
 			"net.hour.aotb.AllOfTheAboveDataGenerator"
