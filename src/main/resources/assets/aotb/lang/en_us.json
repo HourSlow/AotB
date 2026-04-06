@@ -8,5 +8,11 @@
 
     "block.aotb.deepslate_wall": "Deepslate Wall",
     "block.aotb.deepslate_stairs": "Deepslate Stairs",
-    "block.aotb.deepslate_slab": "Deepslate Slab"
+    "block.aotb.deepslate_slab": "Deepslate Slab",
+
+    "block.aotb.dark_prismarine_wall": "Dark Prismarine Wall",
+    "block.aotb.prismarine_brick_wall": "Prismarine Brick Wall",
+
+    "block.aotb.smooth_sandstone_wall": "Smooth Sandstone Wall",
+    "block.aotb.smooth_red_sandstone_wall": "Smooth Red Sandstone Wall"
 }

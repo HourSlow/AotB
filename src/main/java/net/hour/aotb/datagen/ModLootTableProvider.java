@@ -24,5 +24,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SMOOTH_STONE_STAIRS);
         addDrop(ModBlocks.SMOOTH_STONE_WALL);
         addDrop(ModBlocks.STONE_WALL);
+
+        addDrop(ModBlocks.DARK_PRISMARINE_WALL);
+        addDrop(ModBlocks.PRISMARINE_BRICK_WALL);
+
+        addDrop(ModBlocks.SMOOTH_SANDSTONE_WALL);
+        addDrop(ModBlocks.SMOOTH_RED_SANDSTONE_WALL);
     }
 }

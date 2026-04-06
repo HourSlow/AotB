@@ -26,11 +26,21 @@ public class ModBlockTagsProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STONE_WALL)
 
                 .add(ModBlocks.SMOOTH_STONE_STAIRS)
-                .add(ModBlocks.SMOOTH_STONE_WALL);
+                .add(ModBlocks.SMOOTH_STONE_WALL)
+
+                .add(ModBlocks.PRISMARINE_BRICK_WALL)
+                .add(ModBlocks.DARK_PRISMARINE_WALL)
+
+                .add(ModBlocks.SMOOTH_SANDSTONE_WALL)
+                .add(ModBlocks.SMOOTH_RED_SANDSTONE_WALL);
 
         getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(ModBlocks.DEEPSLATE_WALL)
                 .add(ModBlocks.STONE_WALL)
-                .add(ModBlocks.SMOOTH_STONE_WALL);
+                .add(ModBlocks.DARK_PRISMARINE_WALL)
+                .add(ModBlocks.PRISMARINE_BRICK_WALL)
+                .add(ModBlocks.SMOOTH_STONE_WALL)
+                .add(ModBlocks.SMOOTH_SANDSTONE_WALL)
+                .add(ModBlocks.SMOOTH_RED_SANDSTONE_WALL);
     }
 }

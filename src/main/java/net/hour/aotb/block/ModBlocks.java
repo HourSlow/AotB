@@ -41,6 +41,21 @@ public class ModBlocks {
             new SlabBlock(AbstractBlock.Settings.copy(Blocks.DEEPSLATE)));
 
 
+    public static final Block DARK_PRISMARINE_WALL = registerBlock("dark_prismarine_wall",
+            new WallBlock(AbstractBlock.Settings.copy(Blocks.DARK_PRISMARINE)));
+
+    public static final Block PRISMARINE_BRICK_WALL = registerBlock("prismarine_brick_wall",
+            new WallBlock(AbstractBlock.Settings.copy(Blocks.PRISMARINE_BRICKS)));
+
+
+    public static final Block SMOOTH_SANDSTONE_WALL = registerBlock("smooth_sandstone_wall",
+            new WallBlock(AbstractBlock.Settings.copy(Blocks.SMOOTH_SANDSTONE)));
+
+    public static final Block SMOOTH_RED_SANDSTONE_WALL = registerBlock("smooth_red_sandstone_wall",
+            new WallBlock(AbstractBlock.Settings.copy(Blocks.SMOOTH_RED_SANDSTONE)));
+
+
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -66,6 +81,12 @@ public class ModBlocks {
             entries.add(DEEPSLATE_SLAB);
             entries.add(DEEPSLATE_STAIRS);
             entries.add(DEEPSLATE_WALL);
+
+            entries.add(DARK_PRISMARINE_WALL);
+            entries.add(PRISMARINE_BRICK_WALL);
+
+            entries.add(SMOOTH_SANDSTONE_WALL);
+            entries.add(SMOOTH_RED_SANDSTONE_WALL);
         });
     }
 }

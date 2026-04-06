@@ -18,7 +18,10 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool deepslatePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.DEEPSLATE);
         BlockStateModelGenerator.BlockTexturePool smoothStonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.SMOOTH_STONE);
         BlockStateModelGenerator.BlockTexturePool stonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.STONE);
-
+        BlockStateModelGenerator.BlockTexturePool darkPrismarinePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.DARK_PRISMARINE);
+        BlockStateModelGenerator.BlockTexturePool prismarineBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.PRISMARINE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool smoothSandstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.SMOOTH_SANDSTONE);
+        BlockStateModelGenerator.BlockTexturePool smoothRedSandstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.SMOOTH_RED_SANDSTONE);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_BRICKS);
 
@@ -31,6 +34,11 @@ public class ModModelProvider extends FabricModelProvider {
 
         stonePool.wall(ModBlocks.STONE_WALL);
 
+        darkPrismarinePool.wall(ModBlocks.DARK_PRISMARINE_WALL);
+        prismarineBricksPool.wall(ModBlocks.PRISMARINE_BRICK_WALL);
+
+        smoothSandstonePool.wall(ModBlocks.SMOOTH_SANDSTONE_WALL);
+        smoothRedSandstonePool.wall(ModBlocks.SMOOTH_RED_SANDSTONE_WALL);
     }
 
     @Override
