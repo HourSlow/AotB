@@ -1,3 +1,12 @@
 {
-    "block.aotb.cracked_bricks": "Cracked Bricks"
+    "block.aotb.cracked_bricks": "Cracked Bricks",
+
+    "block.aotb.stone_wall": "Stone Wall",
+
+    "block.aotb.smooth_stone_wall": "Smooth Stone Wall",
+    "block.aotb.smooth_stone_stairs": "Smooth Stone Stairs",
+
+    "block.aotb.deepslate_wall": "Deepslate Wall",
+    "block.aotb.deepslate_stairs": "Deepslate Stairs",
+    "block.aotb.deepslate_slab": "Deepslate Slab"
 }
