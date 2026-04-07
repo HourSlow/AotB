@@ -42,5 +42,9 @@ public class ModBlockTagsProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.SMOOTH_STONE_WALL)
                 .add(ModBlocks.SMOOTH_SANDSTONE_WALL)
                 .add(ModBlocks.SMOOTH_RED_SANDSTONE_WALL);
+
+        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
+                .add(ModBlocks.MOSSY_STAIRS)
+                .add(ModBlocks.MOSSY_SLAB);
     }
 }

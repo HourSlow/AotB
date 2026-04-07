@@ -22,6 +22,7 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool prismarineBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.PRISMARINE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool smoothSandstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.SMOOTH_SANDSTONE);
         BlockStateModelGenerator.BlockTexturePool smoothRedSandstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.SMOOTH_RED_SANDSTONE);
+        BlockStateModelGenerator.BlockTexturePool mossBlockPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.MOSS_BLOCK);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_BRICKS);
 
@@ -33,6 +34,9 @@ public class ModModelProvider extends FabricModelProvider {
         smoothStonePool.wall(ModBlocks.SMOOTH_STONE_WALL);
 
         stonePool.wall(ModBlocks.STONE_WALL);
+
+        mossBlockPool.slab(ModBlocks.MOSSY_SLAB);
+        mossBlockPool.stairs(ModBlocks.MOSSY_STAIRS);
 
         darkPrismarinePool.wall(ModBlocks.DARK_PRISMARINE_WALL);
         prismarineBricksPool.wall(ModBlocks.PRISMARINE_BRICK_WALL);

@@ -47,6 +47,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.STONE_WALL, Items.STONE);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.STONE_WALL, Items.STONE, 1);
 
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_SLAB, Items.MOSS_BLOCK);
+        createStairsRecipe(ModBlocks.MOSSY_STAIRS, Ingredient.ofItems(Items.MOSS_BLOCK))
+                .criterion(hasItem(Items.MOSS_BLOCK), conditionsFromItem(Items.MOSS_BLOCK))
+                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "mossy_stairs_from_moss_block"));
+
         offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_STONE_WALL, Items.SMOOTH_STONE);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_STONE_STAIRS, Items.SMOOTH_STONE, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_STONE_WALL, Items.SMOOTH_STONE, 1);

@@ -55,6 +55,12 @@ public class ModBlocks {
             new WallBlock(AbstractBlock.Settings.copy(Blocks.SMOOTH_RED_SANDSTONE)));
 
 
+    public static final Block MOSSY_STAIRS = registerBlock("mossy_stairs",
+            new StairsBlock(Blocks.MOSS_BLOCK.getDefaultState(),
+                    AbstractBlock.Settings.copy(Blocks.MOSS_BLOCK)));
+
+    public static final Block MOSSY_SLAB = registerBlock("mossy_slab",
+            new SlabBlock(AbstractBlock.Settings.copy(Blocks.MOSS_BLOCK)));
 
 
     private static Block registerBlock(String name, Block block) {
@@ -74,6 +80,9 @@ public class ModBlocks {
             entries.add(CRACKED_BRICKS);
 
             entries.add(STONE_WALL);
+
+            entries.add(MOSSY_SLAB);
+            entries.add(MOSSY_STAIRS);
 
             entries.add(SMOOTH_STONE_WALL);
             entries.add(SMOOTH_STONE_STAIRS);
