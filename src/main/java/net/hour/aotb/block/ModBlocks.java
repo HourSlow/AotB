@@ -179,9 +179,6 @@ public class ModBlocks {
 
             entries.add(STONE_WALL);
 
-            entries.add(MOSSY_SLAB);
-            entries.add(MOSSY_STAIRS);
-
             entries.add(SMOOTH_STONE_WALL);
             entries.add(SMOOTH_STONE_STAIRS);
 
@@ -244,6 +241,11 @@ public class ModBlocks {
 
             entries.add(PINK_WOOL_SLAB);
             entries.add(PINK_WOOL_STAIRS);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
+            entries.add(MOSSY_SLAB);
+            entries.add(MOSSY_STAIRS);
         });
     }
 }

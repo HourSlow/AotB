@@ -1,12 +1,22 @@
 package net.hour.aotb.datagen;
 
+import com.mojang.datafixers.TypeRewriteRule;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.fabricmc.fabric.api.recipe.v1.ingredient.DefaultCustomIngredients;
+import net.fabricmc.fabric.impl.recipe.ingredient.builtin.NbtIngredient;
 import net.hour.aotb.AllOfTheAbove;
 import net.hour.aotb.block.ModBlocks;
+import net.hour.aotb.potion.ModPotions;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionUtil;
+import net.minecraft.potion.Potions;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
@@ -74,81 +84,206 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_WOOL_SLAB, Items.WHITE_WOOL);
         createStairsRecipe(ModBlocks.WHITE_WOOL_STAIRS, Ingredient.ofItems(Items.WHITE_WOOL))
                 .criterion(hasItem(Items.WHITE_WOOL), conditionsFromItem(Items.WHITE_WOOL))
-                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "white_wool_stairs_from_deepslate"));
+                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "white_wool_stairs_from_white_wool"));
 
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_WOOL_SLAB, Items.LIGHT_GRAY_WOOL);
         createStairsRecipe(ModBlocks.LIGHT_GRAY_WOOL_STAIRS, Ingredient.ofItems(Items.LIGHT_GRAY_WOOL))
                 .criterion(hasItem(Items.LIGHT_GRAY_WOOL), conditionsFromItem(Items.LIGHT_GRAY_WOOL))
-                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "light_gray_wool_stairs_from_deepslate"));
+                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "light_gray_wool_stairs_from_light_gray_wool"));
 
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_WOOL_SLAB, Items.GRAY_WOOL);
         createStairsRecipe(ModBlocks.GRAY_WOOL_STAIRS, Ingredient.ofItems(Items.GRAY_WOOL))
                 .criterion(hasItem(Items.GRAY_WOOL), conditionsFromItem(Items.GRAY_WOOL))
-                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "gray_wool_stairs_from_deepslate"));
+                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "gray_wool_stairs_from_gray_wool"));
 
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_WOOL_SLAB, Items.BLACK_WOOL);
         createStairsRecipe(ModBlocks.BLACK_WOOL_STAIRS, Ingredient.ofItems(Items.BLACK_WOOL))
                 .criterion(hasItem(Items.BLACK_WOOL), conditionsFromItem(Items.BLACK_WOOL))
-                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "black_wool_stairs_from_deepslate"));
+                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "black_wool_stairs_from_black_wool"));
 
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_WOOL_SLAB, Items.BROWN_WOOL);
         createStairsRecipe(ModBlocks.BROWN_WOOL_STAIRS, Ingredient.ofItems(Items.BROWN_WOOL))
                 .criterion(hasItem(Items.BROWN_WOOL), conditionsFromItem(Items.BROWN_WOOL))
-                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "brown_wool_stairs_from_deepslate"));
+                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "brown_wool_stairs_from_brown_wool"));
 
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_WOOL_SLAB, Items.RED_WOOL);
         createStairsRecipe(ModBlocks.RED_WOOL_STAIRS, Ingredient.ofItems(Items.RED_WOOL))
                 .criterion(hasItem(Items.RED_WOOL), conditionsFromItem(Items.RED_WOOL))
-                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "red_wool_stairs_from_deepslate"));
+                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "red_wool_stairs_from_red_wool"));
 
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_WOOL_SLAB, Items.ORANGE_WOOL);
         createStairsRecipe(ModBlocks.ORANGE_WOOL_STAIRS, Ingredient.ofItems(Items.ORANGE_WOOL))
                 .criterion(hasItem(Items.ORANGE_WOOL), conditionsFromItem(Items.ORANGE_WOOL))
-                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "orange_wool_stairs_from_deepslate"));
+                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "orange_wool_stairs_from_orange_wool"));
 
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_WOOL_SLAB, Items.YELLOW_WOOL);
         createStairsRecipe(ModBlocks.YELLOW_WOOL_STAIRS, Ingredient.ofItems(Items.YELLOW_WOOL))
                 .criterion(hasItem(Items.YELLOW_WOOL), conditionsFromItem(Items.YELLOW_WOOL))
-                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "yellow_wool_stairs_from_deepslate"));
+                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "yellow_wool_stairs_from_yellow_wool"));
 
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_WOOL_SLAB, Items.LIME_WOOL);
         createStairsRecipe(ModBlocks.LIME_WOOL_STAIRS, Ingredient.ofItems(Items.LIME_WOOL))
                 .criterion(hasItem(Items.LIME_WOOL), conditionsFromItem(Items.LIME_WOOL))
-                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "lime_wool_stairs_from_deepslate"));
+                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "lime_wool_stairs_from_lime_wool"));
 
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_WOOL_SLAB, Items.GREEN_WOOL);
         createStairsRecipe(ModBlocks.GREEN_WOOL_STAIRS, Ingredient.ofItems(Items.GREEN_WOOL))
                 .criterion(hasItem(Items.GREEN_WOOL), conditionsFromItem(Items.GREEN_WOOL))
-                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "green_wool_stairs_from_deepslate"));
+                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "green_wool_stairs_from_green_wool"));
 
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_WOOL_SLAB, Items.CYAN_WOOL);
         createStairsRecipe(ModBlocks.CYAN_WOOL_STAIRS, Ingredient.ofItems(Items.CYAN_WOOL))
                 .criterion(hasItem(Items.CYAN_WOOL), conditionsFromItem(Items.CYAN_WOOL))
-                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "cyan_wool_stairs_from_deepslate"));
+                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "cyan_wool_stairs_from_cyan_wool"));
 
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_WOOL_SLAB, Items.LIGHT_BLUE_WOOL);
         createStairsRecipe(ModBlocks.LIGHT_BLUE_WOOL_STAIRS, Ingredient.ofItems(Items.LIGHT_BLUE_WOOL))
                 .criterion(hasItem(Items.LIGHT_BLUE_WOOL), conditionsFromItem(Items.LIGHT_BLUE_WOOL))
-                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "light_blue_wool_stairs_from_deepslate"));
+                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "light_blue_wool_stairs_from light_blue"));
 
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_WOOL_SLAB, Items.BLUE_WOOL);
         createStairsRecipe(ModBlocks.BLUE_WOOL_STAIRS, Ingredient.ofItems(Items.BLUE_WOOL))
                 .criterion(hasItem(Items.BLUE_WOOL), conditionsFromItem(Items.BLUE_WOOL))
-                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "blue_wool_stairs_from_deepslate"));
+                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "blue_wool_stairs_from_blue_wool"));
 
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_WOOL_SLAB, Items.PURPLE_WOOL);
         createStairsRecipe(ModBlocks.PURPLE_WOOL_STAIRS, Ingredient.ofItems(Items.PURPLE_WOOL))
                 .criterion(hasItem(Items.PURPLE_WOOL), conditionsFromItem(Items.PURPLE_WOOL))
-                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "purple_wool_stairs_from_deepslate"));
+                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "purple_wool_stairs_from_purple_wool"));
 
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_WOOL_SLAB, Items.MAGENTA_WOOL);
         createStairsRecipe(ModBlocks.MAGENTA_WOOL_STAIRS, Ingredient.ofItems(Items.MAGENTA_WOOL))
                 .criterion(hasItem(Items.MAGENTA_WOOL), conditionsFromItem(Items.MAGENTA_WOOL))
-                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "magenta_wool_stairs_from_deepslate"));
+                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "magenta_wool_stairs_from_magenta_wool"));
 
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_WOOL_SLAB, Items.PINK_WOOL);
         createStairsRecipe(ModBlocks.PINK_WOOL_STAIRS, Ingredient.ofItems(Items.PINK_WOOL))
                 .criterion(hasItem(Items.PINK_WOOL), conditionsFromItem(Items.PINK_WOOL))
-                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "pink_wool_stairs_from_deepslate"));
+                .offerTo(exporter, Identifier.of(AllOfTheAbove.MOD_ID, "pink_wool_stairs_from_pink_wool"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Items.GRASS_BLOCK)
+                .pattern("   ")
+                .pattern(" G ")
+                .pattern(" E ")
+                .input('G', Blocks.TALL_GRASS)
+                .input('E', Blocks.DIRT)
+                .criterion(hasItem(Blocks.DIRT), conditionsFromItem(Blocks.DIRT))
+                .offerTo(exporter, new Identifier(AllOfTheAbove.MOD_ID, "tall_grass_grass_block"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Items.GRASS_BLOCK)
+                .pattern("   ")
+                .pattern(" G ")
+                .pattern(" E ")
+                .input('G', Blocks.FERN)
+                .input('E', Blocks.DIRT)
+                .criterion(hasItem(Blocks.DIRT), conditionsFromItem(Blocks.DIRT))
+                .offerTo(exporter, new Identifier(AllOfTheAbove.MOD_ID, "fern_grass_block"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Items.GRASS_BLOCK)
+                .pattern("   ")
+                .pattern(" G ")
+                .pattern(" E ")
+                .input('G', Blocks.LARGE_FERN)
+                .input('E', Blocks.DIRT)
+                .criterion(hasItem(Blocks.DIRT), conditionsFromItem(Blocks.DIRT))
+                .offerTo(exporter, new Identifier(AllOfTheAbove.MOD_ID, "large_fern_grass_block"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Items.GRASS_BLOCK)
+                .pattern("   ")
+                .pattern(" G ")
+                .pattern(" E ")
+                .input('G', Blocks.MOSS_CARPET)
+                .input('E', Blocks.DIRT)
+                .criterion(hasItem(Blocks.DIRT), conditionsFromItem(Blocks.DIRT))
+                .offerTo(exporter, new Identifier(AllOfTheAbove.MOD_ID, "moss_carpet_grass_block"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Items.GRASS_BLOCK)
+                .pattern("   ")
+                .pattern(" G ")
+                .pattern(" E ")
+                .input('G', Blocks.GRASS)
+                .input('E', Blocks.DIRT)
+                .criterion(hasItem(Blocks.DIRT), conditionsFromItem(Blocks.DIRT))
+                .offerTo(exporter, new Identifier(AllOfTheAbove.MOD_ID, "grass_grass_block"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, Items.SADDLE)
+                .pattern("LLL")
+                .pattern("I I")
+                .pattern("   ")
+                .input('L', Items.LEATHER)
+                .input('I', Items.IRON_INGOT)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .offerTo(exporter);
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks.COBWEB, 3)
+                .pattern("S S")
+                .pattern(" S ")
+                .pattern("S S")
+                .input('S', Items.STRING)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .offerTo(exporter);
+
+        offerShapelessRecipe(exporter, Items.STRING, Items.WHITE_WOOL, "misc", 4);
+        offerShapelessRecipe(exporter, Items.STRING, Items.LIGHT_GRAY_WOOL, "misc", 4);
+        offerShapelessRecipe(exporter, Items.STRING, Items.GRAY_WOOL, "misc", 4);
+        offerShapelessRecipe(exporter, Items.STRING, Items.BLACK_WOOL, "misc", 4);
+        offerShapelessRecipe(exporter, Items.STRING, Items.BROWN_WOOL, "misc", 4);
+        offerShapelessRecipe(exporter, Items.STRING, Items.RED_WOOL, "misc", 4);
+        offerShapelessRecipe(exporter, Items.STRING, Items.ORANGE_WOOL, "misc", 4);
+        offerShapelessRecipe(exporter, Items.STRING, Items.YELLOW_WOOL, "misc", 4);
+        offerShapelessRecipe(exporter, Items.STRING, Items.LIME_WOOL, "misc", 4);
+        offerShapelessRecipe(exporter, Items.STRING, Items.GREEN_WOOL, "misc", 4);
+        offerShapelessRecipe(exporter, Items.STRING, Items.CYAN_WOOL, "misc", 4);
+        offerShapelessRecipe(exporter, Items.STRING, Items.LIGHT_BLUE_WOOL, "misc", 4);
+        offerShapelessRecipe(exporter, Items.STRING, Items.BLUE_WOOL, "misc", 4);
+        offerShapelessRecipe(exporter, Items.STRING, Items.PURPLE_WOOL, "misc", 4);
+        offerShapelessRecipe(exporter, Items.STRING, Items.MAGENTA_WOOL, "misc", 4);
+        offerShapelessRecipe(exporter, Items.STRING, Items.PINK_WOOL, "misc", 4);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.STONE_PICKAXE)
+                .pattern("BBB")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('S', Items.STICK)
+                .input('B', Items.BASALT)
+                .criterion(hasItem(Items.BASALT), conditionsFromItem(Items.BASALT))
+                .offerTo(exporter, new Identifier(AllOfTheAbove.MOD_ID, "basalt_pickaxe"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.STONE_PICKAXE)
+                .pattern("GGG")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('S', Items.STICK)
+                .input('G', Items.GRANITE)
+                .criterion(hasItem(Items.GRANITE), conditionsFromItem(Items.GRANITE))
+                .offerTo(exporter, new Identifier(AllOfTheAbove.MOD_ID, "granite_pickaxe"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.STONE_PICKAXE)
+                .pattern("DDD")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('S', Items.STICK)
+                .input('D', Items.DIORITE)
+                .criterion(hasItem(Items.DIORITE), conditionsFromItem(Items.DIORITE))
+                .offerTo(exporter, new Identifier(AllOfTheAbove.MOD_ID, "diorite_pickaxe"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.STONE_PICKAXE)
+                .pattern("AAA")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('S', Items.STICK)
+                .input('A', Items.ANDESITE)
+                .criterion(hasItem(Items.ANDESITE), conditionsFromItem(Items.ANDESITE))
+                .offerTo(exporter, new Identifier(AllOfTheAbove.MOD_ID, "andesite_pickaxe"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.STONE_PICKAXE)
+                .pattern("TTT")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('S', Items.STICK)
+                .input('T', Items.TUFF)
+                .criterion(hasItem(Items.TUFF), conditionsFromItem(Items.TUFF))
+                .offerTo(exporter, new Identifier(AllOfTheAbove.MOD_ID, "tuff_pickaxe"));
     }
 }

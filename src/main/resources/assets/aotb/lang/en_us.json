@@ -66,5 +66,18 @@
     "block.aotb.magenta_wool_slab": "Magenta Wool Slab",
 
     "block.aotb.pink_wool_stairs": "Pink Wool Stairs",
-    "block.aotb.pink_wool_slab": "Pink Wool Slab"
+    "block.aotb.pink_wool_slab": "Pink Wool Slab",
+
+    "item.minecraft.potion.effect.glowing_potion": "Potion of Glowing",
+    "item.minecraft.splash_potion.effect.glowing_potion": "Splash Potion of Glowing",
+    "item.minecraft.lingering_potion.effect.glowing_potion": "Lingering Potion of Glowing",
+    "item.minecraft.tipped_arrow.effect.glowing_potion": "Arrow of Glowing",
+    "item.minecraft.potion.effect.glowing_potion_2": "Potion of Glowing",
+    "item.minecraft.splash_potion.effect.glowing_potion_2": "Splash Potion of Glowing",
+    "item.minecraft.lingering_potion.effect.glowing_potion_2": "Lingering Potion of Glowing",
+    "item.minecraft.tipped_arrow.effect.glowing_potion": "Arrow of Glowing",
+    "item.minecraft.potion.effect.unluck_potion": "Potion of Misfortune",
+    "item.minecraft.splash_potion.effect.unluck_potion": "Splash Potion of Misfortune",
+    "item.minecraft.lingering_potion.effect.unluck_potion": "Lingering Potion of Misfortune",
+    "item.minecraft.tipped_arrow.effect.unluck_potion": "Arrow of Misfortune"
 }
