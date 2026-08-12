@@ -9,8 +9,8 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
-    public ModLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
-        super(dataOutput, registryLookup);
+    public ModLootTableProvider(FabricDataOutput dataOutput) {
+        super(dataOutput);
     }
 
     @Override
@@ -34,5 +34,55 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.SMOOTH_SANDSTONE_WALL);
         addDrop(ModBlocks.SMOOTH_RED_SANDSTONE_WALL);
+
+
+
+        addDrop(ModBlocks.WHITE_WOOL_SLAB);
+        addDrop(ModBlocks.WHITE_WOOL_STAIRS);
+
+        addDrop(ModBlocks.LIGHT_GRAY_WOOL_SLAB);
+        addDrop(ModBlocks.LIGHT_GRAY_WOOL_STAIRS);
+
+        addDrop(ModBlocks.GRAY_WOOL_SLAB);
+        addDrop(ModBlocks.GRAY_WOOL_STAIRS);
+
+        addDrop(ModBlocks.BLACK_WOOL_STAIRS);
+        addDrop(ModBlocks.BLACK_WOOL_SLAB);
+
+        addDrop(ModBlocks.BROWN_WOOL_SLAB);
+        addDrop(ModBlocks.BROWN_WOOL_STAIRS);
+
+        addDrop(ModBlocks.RED_WOOL_SLAB);
+        addDrop(ModBlocks.RED_WOOL_STAIRS);
+
+        addDrop(ModBlocks.ORANGE_WOOL_SLAB);
+        addDrop(ModBlocks.ORANGE_WOOL_STAIRS);
+
+        addDrop(ModBlocks.YELLOW_WOOL_SLAB);
+        addDrop(ModBlocks.YELLOW_WOOL_STAIRS);
+
+        addDrop(ModBlocks.LIME_WOOL_SLAB);
+        addDrop(ModBlocks.LIME_WOOL_STAIRS);
+
+        addDrop(ModBlocks.GREEN_WOOL_SLAB);
+        addDrop(ModBlocks.GREEN_WOOL_STAIRS);
+
+        addDrop(ModBlocks.CYAN_WOOL_SLAB);
+        addDrop(ModBlocks.CYAN_WOOL_STAIRS);
+
+        addDrop(ModBlocks.LIGHT_BLUE_WOOL_STAIRS);
+        addDrop(ModBlocks.LIGHT_BLUE_WOOL_SLAB);
+
+        addDrop(ModBlocks.BLUE_WOOL_SLAB);
+        addDrop(ModBlocks.BLUE_WOOL_STAIRS);
+
+        addDrop(ModBlocks.PURPLE_WOOL_SLAB);
+        addDrop(ModBlocks.PURPLE_WOOL_STAIRS);
+
+        addDrop(ModBlocks.MAGENTA_WOOL_SLAB);
+        addDrop(ModBlocks.MAGENTA_WOOL_STAIRS);
+
+        addDrop(ModBlocks.PINK_WOOL_SLAB);
+        addDrop(ModBlocks.PINK_WOOL_STAIRS);
     }
 }

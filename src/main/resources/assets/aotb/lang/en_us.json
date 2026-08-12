@@ -17,5 +17,54 @@
     "block.aotb.prismarine_brick_wall": "Prismarine Brick Wall",
 
     "block.aotb.smooth_sandstone_wall": "Smooth Sandstone Wall",
-    "block.aotb.smooth_red_sandstone_wall": "Smooth Red Sandstone Wall"
+    "block.aotb.smooth_red_sandstone_wall": "Smooth Red Sandstone Wall",
+
+
+    "block.aotb.white_wool_stairs": "White Wool Stairs",
+    "block.aotb.white_wool_slab": "White Wool Slab",
+
+    "block.aotb.light_gray_wool_stairs": "Light Gray Wool Stairs",
+    "block.aotb.light_gray_wool_slab": "Light Gray Wool Slab",
+
+    "block.aotb.gray_wool_stairs": "Gray Wool Stairs",
+    "block.aotb.gray_wool_slab": "Gray Wool Slab",
+
+    "block.aotb.black_wool_stairs": "Black Wool Stairs",
+    "block.aotb.black_wool_slab": "Black Wool Slab",
+
+    "block.aotb.brown_wool_stairs": "Brown Wool Stairs",
+    "block.aotb.brown_wool_slab": "Brown Wool Slab",
+
+    "block.aotb.red_wool_stairs": "Red Wool Stairs",
+    "block.aotb.red_wool_slab": "Red Wool Slab",
+
+    "block.aotb.orange_wool_stairs": "Orange Wool Stairs",
+    "block.aotb.orange_wool_slab": "Orange Wool Slab",
+
+    "block.aotb.yellow_wool_stairs": "Yellow Wool Stairs",
+    "block.aotb.yellow_wool_slab": "Yellow Wool Slab",
+
+    "block.aotb.lime_wool_stairs": "Lime Wool Stairs",
+    "block.aotb.lime_wool_slab": "Lime Wool Slab",
+
+    "block.aotb.green_wool_stairs": "Green Wool Stairs",
+    "block.aotb.green_wool_slab": "Green Wool Slab",
+
+    "block.aotb.cyan_wool_stairs": "Cyan Wool Stairs",
+    "block.aotb.cyan_wool_slab": "Cyan Wool Slab",
+
+    "block.aotb.light_blue_wool_stairs": "Light Blue Wool Stairs",
+    "block.aotb.light_blue_wool_slab": "Light Blue Wool Slab",
+
+    "block.aotb.blue_wool_stairs": "Blue Wool Stairs",
+    "block.aotb.blue_wool_slab": "Blue Wool Slab",
+
+    "block.aotb.purple_wool_stairs": "Purple Wool Stairs",
+    "block.aotb.purple_wool_slab": "Purple Wool Slab",
+
+    "block.aotb.magenta_wool_stairs": "Magenta Wool Stairs",
+    "block.aotb.magenta_wool_slab": "Magenta Wool Slab",
+
+    "block.aotb.pink_wool_stairs": "Pink Wool Stairs",
+    "block.aotb.pink_wool_slab": "Pink Wool Slab"
 }
