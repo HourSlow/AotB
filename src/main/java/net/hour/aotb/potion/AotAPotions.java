@@ -9,7 +9,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
-public class ModPotions {
+public class AotAPotions {
 
     public static final RegistryEntry<Potion> GLOWING_POTION = registerPotion("glowing_potion",
             new Potion(new StatusEffectInstance(StatusEffects.GLOWING, 1800, 0)));

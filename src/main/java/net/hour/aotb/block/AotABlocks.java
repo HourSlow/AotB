@@ -11,7 +11,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 
-public class ModBlocks {
+public class AotABlocks {
 
 
     public static final Block CRACKED_BRICKS = registerBlock("cracked_bricks",
@@ -21,6 +21,12 @@ public class ModBlocks {
 
     public static final Block STONE_WALL = registerBlock("stone_wall",
             new WallBlock(AbstractBlock.Settings.copy(Blocks.STONE)));
+    public static final Block POLISHED_DIORITE_WALL = registerBlock("polished_diorite_wall",
+            new WallBlock(AbstractBlock.Settings.copy(Blocks.DIORITE)));
+    public static final Block POLISHED_ANDESITE_WALL = registerBlock("polished_andesite_wall",
+            new WallBlock(AbstractBlock.Settings.copy(Blocks.ANDESITE)));
+    public static final Block POLISHED_GRANITE_WALL = registerBlock("polished_granite_wall",
+            new WallBlock(AbstractBlock.Settings.copy(Blocks.GRANITE)));
 
 
 
@@ -178,6 +184,9 @@ public class ModBlocks {
             entries.add(CRACKED_BRICKS);
 
             entries.add(STONE_WALL);
+            entries.add(POLISHED_ANDESITE_WALL);
+            entries.add(POLISHED_DIORITE_WALL);
+            entries.add(POLISHED_GRANITE_WALL);
 
             entries.add(SMOOTH_STONE_WALL);
             entries.add(SMOOTH_STONE_STAIRS);
